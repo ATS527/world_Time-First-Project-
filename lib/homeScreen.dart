@@ -8,9 +8,20 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Text("Home Screen"),
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            SafeArea(child: Text("Home Screen")),
+            FlatButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/ChooseLocation');
+              },
+              icon: Icon(Icons.add_location),
+              label: Text("Choose your Location!"),
+            ),
+          ],
+        ),
       ),
     );
   }
