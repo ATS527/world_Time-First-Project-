@@ -6,6 +6,7 @@ import 'package:world_time/Pages/loadingScreen.dart';
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/LoadingScreen',
       routes: {
         './': (context) => HomeScreen(),
